@@ -2,10 +2,17 @@
     background-color: black;
 }
 
+.welcome-container{
+    position: relative;
+}
+
 .welcome-banner{
-    position:absolute;
-    top: 50;
-    left: 50
+    position: absolute;
+     top: 20px;
+      left: 50%;
+       transform: translate(-50%, -50%);
+        text-align: center; 
+        z-index: 10;
 }
 
 .welcome-btn-label{
