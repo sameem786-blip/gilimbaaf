@@ -1,9 +1,12 @@
 import React, {useState} from 'react'
 import './welcome.css'
 
-const Welcome = () => {
-  return (
-    <div>welcome screen</div>
+const Welcome = ({carpetRoll}) => {
+    return (
+      <>
+      <div >welcome screen</div>
+            <button onClick={carpetRoll}>Click to roll btn</button>
+            </>
   )
 }
 
