@@ -36,7 +36,7 @@ const Welcome = ({ carpetRoll }) => {
       </Canvas>
         <div className='welcome-banner'>
       <div className='welcome-btn-label'>welcome screen</div>
-            <button onClick={carpetRoll}>Click to roll btn</button>
+            <button onClick={carpetRoll} style={{color: 'white' }}>Click to roll Qaleen</button>
         </div>
         </div>
   )
