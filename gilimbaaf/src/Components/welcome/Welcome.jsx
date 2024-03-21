@@ -7,6 +7,7 @@ import RolledCarpet from '../../../public/RolledCarpet'
 
 const Welcome = ({ carpetRoll }) => {
   const groupRef = useRef();
+  
 
   const handlePointerMove = (event) => {
     const { clientX, clientY } = event;
@@ -29,10 +30,10 @@ const Welcome = ({ carpetRoll }) => {
         <ambientLight />
         <Suspense fallback={null}>
           <group ref={groupRef}>
-            <RolledCarpet position={[0.7, 0, 0]} rotation={[Math.PI / 2, Math.PI / 4, 0]} />
+            <RolledCarpet position={[0.15, 0, 0]} rotation={[Math.PI / 2, Math.PI / 4, 0]} />
           </group>
         </Suspense>
-        <OrbitControls enableZoom={false} />
+        <OrbitControls enableZoom={false} enableRotate={false}/>
       </Canvas>
         <div className='welcome-banner'>
       <div className='welcome-btn-label'>welcome screen</div>

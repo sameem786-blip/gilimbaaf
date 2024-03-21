@@ -14,11 +14,11 @@ export default function Model(props) {
   const { nodes, materials } = useGLTF('/rolledCarpet.gltf')
   return (
     <group {...props} dispose={null}>
-      <group rotation={[-Math.PI / 1.2, 0.8, -0.2]} scale={2}>
+      <group rotation={[-Math.PI / 1.3, 0.64, -0.5]} scale={2}>  
         <mesh geometry={nodes.Cube_0.geometry} material={materials.Material} position={[0, 0.193, 0]} rotation={[-Math.PI / 2, 0, Math.PI]} />
       </group>
     </group>
   )
 }
-
+//1.1, 0.77, -0.16
 useGLTF.preload('/rolledCarpet.gltf')
