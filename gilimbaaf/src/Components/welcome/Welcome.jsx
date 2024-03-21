@@ -7,6 +7,15 @@ import RolledCarpet from '../../../public/RolledCarpet'
 
 const Welcome = ({ carpetRoll }) => {
   const groupRef = useRef();
+
+  const containerStyle = {
+    position: 'absolute',
+    top: '0',
+    left: '0',
+    height: '90vh',
+    background: 'rgb(68,78,79)',
+    backgroundImage: 'radial-gradient(circle, rgba(68,78,79,1) 0%, rgba(32,44,44,1) 100%, rgba(68,78,79,1) 100%)'
+  };
   
 
   const handlePointerMove = (event) => {
@@ -24,7 +33,7 @@ const Welcome = ({ carpetRoll }) => {
     return (
       <div className='welcome-container'>
         <Canvas
-        style={{ height: '90vh',position: 'absolute', top: 0, left: 0, background: 'radial-gradient(circle, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 70%, rgba(0, 0, 0, 0.2) 100%)' }}
+        style={containerStyle}
         onPointerMove={handlePointerMove}
       >
         <ambientLight />
