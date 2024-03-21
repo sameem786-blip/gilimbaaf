@@ -7,7 +7,6 @@ import RolledCarpet from '../../../public/RolledCarpet'
 
 const Welcome = ({ carpetRoll }) => {
   const groupRef = useRef();
-  
 
   const handlePointerMove = (event) => {
     const { clientX, clientY } = event;
@@ -21,11 +20,17 @@ const Welcome = ({ carpetRoll }) => {
       groupRef.current.rotation.x = y * 0.1; // Adjust the tilt factor as needed
     }
   };
-    return (
-      <div className='welcome-container'>
-        <Canvas
-        style={{ height: '90vh',position: 'absolute', top: 0, left: 0 }}
+
+  const handleContextMenu = (event) => {
+    event.preventDefault(); // Prevent default context menu behavior
+  };
+
+  return (
+    <div className='welcome-container'>
+      <Canvas
+        style={{ height: '90vh', position: 'absolute', top: 0, left: 0 }}
         onPointerMove={handlePointerMove}
+        onContextMenu={handleContextMenu} // Disable context menu
       >
         <ambientLight />
         <Suspense fallback={null}>
@@ -33,14 +38,14 @@ const Welcome = ({ carpetRoll }) => {
             <RolledCarpet position={[0.15, 0, 0]} rotation={[Math.PI / 2, Math.PI / 4, 0]} />
           </group>
         </Suspense>
-        <OrbitControls enableZoom={false} enableRotate={false}/>
+        <OrbitControls enableZoom={false} enableRotate={false} />
       </Canvas>
-        <div className='welcome-banner'>
-      <div className='welcome-btn-label'>welcome screen</div>
-            <button onClick={carpetRoll} style={{color: 'white' }}>Click to roll Qaleen</button>
-        </div>
-        </div>
-  )
-}
+      <div className='welcome-banner'>
+        <div className='welcome-btn-label'>welcome screen</div>
+        <button onClick={carpetRoll} style={{ color: 'white' }}>Click to roll Qaleen</button>
+      </div>
+    </div>
+  );
+};
 
-export default Welcome
+export default Welcome;
