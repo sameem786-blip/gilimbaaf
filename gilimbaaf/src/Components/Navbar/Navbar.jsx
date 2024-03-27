@@ -18,6 +18,7 @@ const pages = ['Home', 'About', 'Catalogue', 'Contact Us'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 const Navbar = () => {
+  const [activeTab, setActiveTab] = React.useState('Home');
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
 
@@ -125,8 +126,8 @@ const Navbar = () => {
             {pages.map((page) => (
               <Button
                 key={page}
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block', fontFamily: 'sans-serif', fontWeight: '500', textTransform: 'capitalize', letterSpacing: '0.25em', '&:hover': {
+                onClick={() => setActiveTab(page)}
+                sx={{ my: 2, color: activeTab === page ? '#ff8c00' : 'white', display: 'block', fontFamily: 'sans-serif', fontWeight: '500', textTransform: 'capitalize', letterSpacing: '0.25em', '&:hover': {
 
       backgroundColor: 'transparent', // Change the background color to gray on hover
 
