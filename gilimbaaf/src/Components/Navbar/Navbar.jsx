@@ -114,7 +114,13 @@ const Navbar = () => {
           >
             LOGO
           </Typography>
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+          <Box sx={{ flexGrow: 1,
+    display: { xs: 'none', md: 'flex' },
+    alignItems: 'center',
+            justifyContent: 'flex-start',
+            gap: '60px',
+            marginLeft: '60px'
+      }}>
             {pages.map((page) => (
               <Button
                 key={page}
