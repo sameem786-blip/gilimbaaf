@@ -14,7 +14,7 @@ import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import './Navbar.css'
 
-const pages = ['Home', 'About', 'Catalogue', 'Newsletter'];
+const pages = ['Home', 'About', 'Catalogue', 'Contact Us'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 const Navbar = () => {
@@ -126,7 +126,7 @@ const Navbar = () => {
               <Button
                 key={page}
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block', fontFamily: 'Byzantheum', fontWeight: '400' }}
+                sx={{ my: 2, color: 'white', display: 'block', fontFamily: 'Byzantheum', fontWeight: '500', textTransform: 'capitalize', letterSpacing: '0.25em', fontStyle: 'italic',   }}
               >
                 {page}
               </Button>
