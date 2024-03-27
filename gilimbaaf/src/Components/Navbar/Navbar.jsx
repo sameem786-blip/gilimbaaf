@@ -56,7 +56,7 @@ const Navbar = () => {
               textDecoration: 'none',
             }}
           >
-            LOGO
+            Gilim Baaf
           </Typography> */}
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -126,7 +126,13 @@ const Navbar = () => {
               <Button
                 key={page}
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block', fontFamily: 'Byzantheum', fontWeight: '500', textTransform: 'capitalize', letterSpacing: '0.25em', fontStyle: 'italic',   }}
+                sx={{ my: 2, color: 'white', display: 'block', fontFamily: 'sans-serif', fontWeight: '500', textTransform: 'capitalize', letterSpacing: '0.25em', '&:hover': {
+
+      backgroundColor: 'transparent', // Change the background color to gray on hover
+
+      color: '#ff8c00', // Change the text color to black on hover
+
+    },   }}
               >
                 {page}
               </Button>
