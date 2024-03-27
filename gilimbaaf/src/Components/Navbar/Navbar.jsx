@@ -37,7 +37,7 @@ const Navbar = () => {
   };
 
   return (
-    <AppBar position="static" sx={{ backgroundColor: 'transparent', boxShadow: 'none' }}>
+    <AppBar position="static" sx={{ backgroundColor: 'transparent', boxShadow: 'none' }} >
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           {/* <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} /> */}
@@ -99,6 +99,7 @@ const Navbar = () => {
           <Typography
             variant="h5"
             noWrap
+            
             component="a"
             href="#app-bar-with-responsive-menu"
             sx={{
@@ -119,13 +120,13 @@ const Navbar = () => {
     alignItems: 'center',
             justifyContent: 'flex-start',
             gap: '60px',
-            marginLeft: '60px'
+            marginLeft: '60px',
       }}>
             {pages.map((page) => (
               <Button
                 key={page}
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block' }}
+                sx={{ my: 2, color: 'white', display: 'block', fontFamily: 'Byzantheum', fontWeight: '400' }}
               >
                 {page}
               </Button>
