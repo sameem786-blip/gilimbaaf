@@ -6,7 +6,6 @@ import Home from '../../Sections/Home/Home';
 const Landing = () => {
   return (
       <div className='landing-container'>
-      <Navbar />
       <Home />
     </div>
   )

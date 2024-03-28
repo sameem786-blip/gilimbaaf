@@ -5,6 +5,7 @@ import "./App.css"
 import Landing from './Pages/Landing/Landing.jsx'
 import { ThemeProvider } from '@mui/material/styles';
 import { createTheme } from '@mui/material/styles';
+import Navbar from './Components/Navbar/Navbar.jsx'
 const theme = createTheme({
   components: {
     MuiPaper: {
@@ -23,9 +24,10 @@ function App() {
 
   return (
     <ThemeProvider theme={theme}>
-    <>
+      <div className='app-container'>
+        <Navbar />
       <Landing/>
-      </>
+      </div>
       </ThemeProvider>
   )
 }
