@@ -4,3 +4,6 @@
     src: local('Byzantheum'), url('../../assets/fonts/Byzantheum/Bizantheum.otf') format('otf');
 }
 
+.css-3dzjca-MuiPaper-root-MuiPopover-paper-MuiMenu-paper{
+    background-color: transparent;
+}
