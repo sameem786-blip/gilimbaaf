@@ -91,13 +91,15 @@ const Navbar = () => {
               sx={{
                 display: { xs: 'block', md: 'none' },background: 'transparent'
               }}
-              style={{background: 'transparent'}}
             >
               {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu} sx={{
-                background: 'transparent'
+                background: 'red'
               }}>
-                  <Typography textAlign="center">{page}</Typography>
+                  <Typography textAlign="center" sx={{
+                    color: 'white',
+                    fontFamily: 'sans-serif'
+              }}>{page}</Typography>
                 </MenuItem>
               ))}
             </Menu>
