@@ -59,7 +59,11 @@ const Navbar = () => {
             Gilim Baaf
           </Typography> */}
 
-          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' }, alignItems: 'center',
+            justifyContent: 'flex-end',
+            background: 'transparent'
+          }}>
+            
             <IconButton
               size="large"
               aria-label="account of current user"
@@ -85,11 +89,14 @@ const Navbar = () => {
               open={Boolean(anchorElNav)}
               onClose={handleCloseNavMenu}
               sx={{
-                display: { xs: 'block', md: 'none' },
+                display: { xs: 'block', md: 'none' },background: 'transparent'
               }}
+              style={{background: 'transparent'}}
             >
               {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
+                <MenuItem key={page} onClick={handleCloseNavMenu} sx={{
+                background: 'transparent'
+              }}>
                   <Typography textAlign="center">{page}</Typography>
                 </MenuItem>
               ))}

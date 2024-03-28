@@ -3,3 +3,9 @@
     font-style: normal;
     src: local('Byzantheum'), url('../../assets/fonts/Byzantheum/Bizantheum.otf') format('otf');
 }
+.css-6hp17o-MuiList-root-MuiMenu-list{
+    background: transparent;
+}
+.css-3dzjca-MuiPaper-root-MuiPopover-paper-MuiMenu-paper{
+    background: transparent;
+}
