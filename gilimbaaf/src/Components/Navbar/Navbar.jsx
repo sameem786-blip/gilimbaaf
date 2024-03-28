@@ -95,7 +95,10 @@ const Navbar = () => {
             >
               {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu} sx={{
-                background: 'red'
+                  background: 'transparent',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'flex-end'
               }}>
                   <Typography textAlign="center" sx={{
                     color: 'white',

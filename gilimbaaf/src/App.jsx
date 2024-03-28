@@ -6,13 +6,12 @@ import Landing from './Pages/Landing/Landing.jsx'
 import { ThemeProvider } from '@mui/material/styles';
 import { createTheme } from '@mui/material/styles';
 const theme = createTheme({
-  // ... other theme customizations
-
   components: {
     MuiPaper: {
       styleOverrides: {
         root: {
-          backgroundColor: 'transparentbbb', // Set background color with transparency
+          background: 'transparent', // Set background color with transparency
+          backdropFilter: 'blur(10px)',
           // You can override other styles from the original class here
         },
       },
