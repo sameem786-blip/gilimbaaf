@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState,useRef, useEffect } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import "./App.css"
@@ -18,6 +18,26 @@ const theme = createTheme({
     },
   },
 });
+
+const [cursorX, setCursorX] = useState(0);
+  const [cursorY, setCursorY] = useState(0);
+  const circleRef = useRef(null);
+
+  const handleMouseMove = (event) => {
+    setCursorX(event.clientX);
+    setCursorY(event.clientY);
+
+    useEffect(() => {
+    document.addEventListener('mousemove', handleMouseMove);
+    return () => document.removeEventListener('mousemove', handleMouseMove);
+  }, []);
+
+  return {
+    cursorX,
+    cursorY,
+    circleRef,
+  };
+  };
 
 function App() {
 

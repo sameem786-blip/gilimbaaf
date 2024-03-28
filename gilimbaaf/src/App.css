@@ -9,3 +9,27 @@
     padding: 0px;
     margin: 0px;
 }
+
+body {
+    position: relative;
+    /* Enable absolute positioning for the overlay */
+}
+
+.follow-cursor::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.2);
+    /* Adjust opacity as desired */
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: transform 0.2s ease-in-out;
+}
+
+.follow-cursor:hover::after {
+    transform: translate(-50%, -50%) scale(1.5);
+    /* Adjust scale factor */
+}
