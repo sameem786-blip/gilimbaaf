@@ -26,17 +26,6 @@ const [cursorX, setCursorX] = useState(0);
   const handleMouseMove = (event) => {
     setCursorX(event.clientX);
     setCursorY(event.clientY);
-
-    useEffect(() => {
-    document.addEventListener('mousemove', handleMouseMove);
-    return () => document.removeEventListener('mousemove', handleMouseMove);
-  }, []);
-
-  return {
-    cursorX,
-    cursorY,
-    circleRef,
-  };
   };
 
 function App() {
