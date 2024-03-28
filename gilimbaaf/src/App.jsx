@@ -17,16 +17,7 @@ const theme = createTheme({
       },
     },
   },
-});
-
-const [cursorX, setCursorX] = useState(0);
-  const [cursorY, setCursorY] = useState(0);
-  const circleRef = useRef(null);
-
-  const handleMouseMove = (event) => {
-    setCursorX(event.clientX);
-    setCursorY(event.clientY);
-  };
+});;
 
 function App() {
 
