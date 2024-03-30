@@ -9,10 +9,15 @@ Row 1-2 col-1
       </div>
       <div className="home-row-1-col-2-column">
         <div className="row-1-col-2-row">
-<div className="home-col-2-row-1-col-1"></div>
+          <div className="home-col-2-row-1-col-1"></div>
           <div className="home-col-2-row-1-col-2"></div>
-          </div>
+        </div>
+        <div className="row-1-col-2-row">
+          <div className="home-col-2-row-1-col-1-2"></div>
+          <div className="home-col-2-row-1-col-2-2"></div>
+        </div>
       </div>
+      
 
     </div>
   )
