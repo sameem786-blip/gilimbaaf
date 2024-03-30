@@ -13,3 +13,9 @@
     flex: 1;
     height: 85%;
 }
+
+.home-row-1-col-2{
+    border: 2px solid purple;
+        flex: 2;
+        height: 85%;
+}
