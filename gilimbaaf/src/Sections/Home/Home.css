@@ -13,6 +13,9 @@
     border: 2px solid red;
     flex: 1;
     height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 
@@ -57,4 +60,17 @@
     border: 2px solid green;
         flex: 1;
         height: 70%;
+}
+
+.left-most{
+    height: 70%;
+    width: 70%;
+    border-radius: 20px;
+        background: rgba(255, 255, 255, 0.05);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+            backdrop-filter: blur(16.5px);
+            -webkit-backdrop-filter: blur(16.5px);
+            border-radius: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.18);
+
 }
