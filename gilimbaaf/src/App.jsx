@@ -26,7 +26,7 @@ function App() {
     <ThemeProvider theme={theme}>
       <div className='app-container'>
         <Navbar />
-      <Landing/>
+        <Landing/>
       </div>
       </ThemeProvider>
   )
