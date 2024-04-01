@@ -1,9 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&display=swap');
 @font-face {
 
     font-family: 'Byzantheum';
     font-style: normal;
     src: local('Byzantheum'), url('./assets/fonts/Byzantheum/Bizantheum.otf') format('otf');
 }
+
 
 *{
     padding: 0px;
@@ -13,7 +15,7 @@
 .app-container {
     /* background: linear-gradient(115deg, rgb(0, 0, 0) 5.8%, rgb(240, 155, 59) 392.6%); */
     height: 100vh;
-    background: url('./assets/bg/home.jpg');
+    background: url('./assets/bg/home.png');
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
