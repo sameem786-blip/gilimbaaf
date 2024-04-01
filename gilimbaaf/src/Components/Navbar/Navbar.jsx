@@ -38,27 +38,35 @@ const Navbar = () => {
   };
 
   return (
-    <AppBar position="static" sx={{ backgroundColor: 'transparent', boxShadow: 'none' }} >
+    <AppBar position="static" sx={{ backgroundColor: 'transparent', boxShadow: '0 7px 20px 5px #00000088;' }} >
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          {/* <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} /> */}
-          {/* <Typography
+          <Typography
             variant="h6"
             noWrap
             component="a"
             href="#app-bar-with-responsive-menu"
             sx={{
-              mr: 2,
-              display: { xs: 'none', md: 'flex' },
-              fontFamily: 'monospace',
-              fontWeight: 700,
-              letterSpacing: '.3rem',
-              color: 'inherit',
-              textDecoration: 'none',
-            }}
+    mr: 2,
+    display: { xs: 'none', md: 'flex' },
+    fontWeight: 700,
+    color: 'transparent', // Note the comma instead of semicolon
+    textDecoration: 'none',
+    fontFamily: 'Aref Ruqaa', // Duplicate declaration, removed for clarity
+    background: 'linear-gradient(90deg, hsla(297, 59%, 34%, 1) 0%, hsla(22, 89%, 37%, 1) 0%, hsla(22, 62%, 33%, 1) 100%)',
+    WebkitBackgroundClip: 'text', // Camel case for vendor prefixes
+    backgroundClip: 'text', // Corrected property name
+              fontSize: '2em',
+              marginBottom: '10px',
+              transition: '.7s all',
+              '&:hover': {
+                filter: 'brightness(1.5)'
+
+    }
+}}
           >
             Gilim Baaf
-          </Typography> */}
+          </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' }, alignItems: 'center',
             justifyContent: 'flex-end',
@@ -102,13 +110,12 @@ const Navbar = () => {
               }}>
                   <Typography textAlign="center" sx={{
                     color: 'white',
-                    fontFamily: 'sans-serif'
+                    fontFamily: 'Aref Ruqaa'
               }}>{page}</Typography>
                 </MenuItem>
               ))}
             </Menu>
           </Box>
-          {/* <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
           <Typography
             variant="h5"
             noWrap
@@ -119,27 +126,27 @@ const Navbar = () => {
               mr: 2,
               display: { xs: 'flex', md: 'none' },
               flexGrow: 1,
-              fontFamily: 'monospace',
+              fontFamily: 'Aref Ruqaa',
               fontWeight: 700,
               letterSpacing: '.3rem',
               color: 'inherit',
               textDecoration: 'none',
             }}
           >
-            LOGO
-          </Typography> */}
+            Gilim Baaf
+          </Typography>
           <Box sx={{ flexGrow: 1,
     display: { xs: 'none', md: 'flex' },
     alignItems: 'center',
             justifyContent: 'flex-start',
-            gap: '60px',
-            marginLeft: '60px',
+            gap: '40px',
+            marginLeft: '30px',
       }}>
             {pages.map((page) => (
               <Button
                 key={page}
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block', fontFamily: 'sans-serif', fontWeight: '500', textTransform: 'capitalize', letterSpacing: '0.25em', '&:hover': {
+                sx={{ my: 2, color: 'white', display: 'block', fontFamily: 'Aref Ruqaa', fontWeight: '700', textTransform: 'capitalize', letterSpacing: '0.25em', '&:hover': {
 
       backgroundColor: 'transparent', // Change the background color to gray on hover
 
