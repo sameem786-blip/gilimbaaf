@@ -15,8 +15,8 @@
 .app-container {
     /* background: linear-gradient(115deg, rgb(0, 0, 0) 5.8%, rgb(240, 155, 59) 392.6%); */
     height: 100vh;
-    background: url('./assets/bg/home.png');
-        background-position: center;
+    /* background: url('./assets/bg/home.png'); */
+        /* background-position: center;
         background-repeat: no-repeat;
-        background-size: cover;
+        background-size: cover; */
 }

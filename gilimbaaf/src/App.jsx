@@ -1,11 +1,12 @@
-import { useState,useRef, useEffect } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import "./App.css"
-import Landing from './Pages/Landing/Landing.jsx'
+import React from 'react';
+import { useState, useEffect } from 'react';
+import "./App.css";
 import { ThemeProvider } from '@mui/material/styles';
 import { createTheme } from '@mui/material/styles';
-import Navbar from './Components/Navbar/Navbar.jsx'
+import Navbar from './Components/Navbar/Navbar.jsx';
+import SplineBg from './Components/SplineBG/SplineBg.jsx';// Import your SplineViewerComponent
+import Landing from './Pages/Landing/Landing.jsx'
+
 const theme = createTheme({
   components: {
     MuiPaper: {
@@ -18,18 +19,20 @@ const theme = createTheme({
       },
     },
   },
-});;
+});
 
 function App() {
-
   return (
     <ThemeProvider theme={theme}>
-      <div className='app-container'>
+      {/* Wrap everything in a container div with Spline Viewer as background */}
+      <div className='app-container' style={{ position: 'relative' }}>
+        <SplineBg />
         <Navbar />
-        <Landing/>
+        <Landing />
+        {/* Your other components */}
       </div>
-      </ThemeProvider>
-  )
+    </ThemeProvider>
+  );
 }
 
-export default App
+export default App;
